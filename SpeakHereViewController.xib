@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpeakHereViewController">
+            <connections>
+                <outlet property="controller" destination="21" id="31"/>
+                <outlet property="view" destination="6" id="7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="6">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="center" image="soundbar_plate_mono.png" translatesAutoresizingMaskIntoConstraints="NO" id="18">
+                    <rect key="frame" x="13" y="93" width="294" height="157"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="157" id="NgA-EV-slM"/>
+                    </constraints>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="PHT-5D-DC5"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Record" width="100" id="11">
+                            <connections>
+                                <action selector="record:" destination="21" id="29"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="13"/>
+                        <barButtonItem title="Play" width="100" id="12">
+                            <connections>
+                                <action selector="play:" destination="21" id="30"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Speak here" id="VLn-fj-Klw"/>
+                    </items>
+                </navigationBar>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                    <rect key="frame" x="83" y="64" width="154" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Iv2-1V-bcx"/>
+                        <constraint firstAttribute="width" constant="154" id="ups-B7-e4j"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="center" image="speaker_grill.png" translatesAutoresizingMaskIntoConstraints="NO" id="32">
+                    <rect key="frame" x="0.0" y="344" width="320" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="nVJ-gO-m9D"/>
+                    </constraints>
+                </imageView>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19" customClass="AQLevelMeter">
+                    <rect key="frame" x="40" y="131" width="241" height="46"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="241" id="7mA-Ze-8Qg"/>
+                        <constraint firstAttribute="height" constant="46" id="X3x-Lo-0Od"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.45268124341964722" green="0.52938151359558105" blue="0.69102239608764648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="16" secondAttribute="trailing" id="1R2-Xw-Unk"/>
+                <constraint firstItem="20" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="4J5-dQ-WCG"/>
+                <constraint firstItem="16" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="APQ-bS-yKT"/>
+                <constraint firstItem="19" firstAttribute="top" secondItem="16" secondAttribute="bottom" constant="67" id="PIZ-bb-P4u"/>
+                <constraint firstItem="18" firstAttribute="top" secondItem="16" secondAttribute="bottom" constant="29" id="Q7I-Px-Cj1"/>
+                <constraint firstAttribute="trailing" secondItem="32" secondAttribute="trailing" id="RY3-sS-CqK"/>
+                <constraint firstItem="32" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="RqH-0w-08r"/>
+                <constraint firstAttribute="trailing" secondItem="18" secondAttribute="trailing" constant="13" id="Y7H-p8-UJs"/>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="YtP-cQ-eVA"/>
+                <constraint firstItem="16" firstAttribute="top" secondItem="WZg-pU-kAP" secondAttribute="top" id="akr-Ir-GEw"/>
+                <constraint firstItem="19" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="gaj-jV-vMM"/>
+                <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="lAJ-qz-f2n"/>
+                <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" id="nT4-lz-YBs"/>
+                <constraint firstItem="20" firstAttribute="top" secondItem="16" secondAttribute="bottom" id="oiV-I7-zRa"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="13" id="rko-4M-Hoh"/>
+                <constraint firstItem="10" firstAttribute="top" secondItem="32" secondAttribute="bottom" id="xKq-Lg-CvY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="WZg-pU-kAP"/>
+            <point key="canvasLocation" x="34" y="168"/>
+        </view>
+        <customObject id="21" customClass="SpeakHereController">
+            <connections>
+                <outlet property="btn_play" destination="12" id="27"/>
+                <outlet property="btn_record" destination="11" id="28"/>
+                <outlet property="fileDescription" destination="20" id="22"/>
+                <outlet property="lvlMeter_in" destination="19" id="23"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="soundbar_plate_mono.png" width="313" height="158"/>
+        <image name="speaker_grill.png" width="320" height="188"/>
+    </resources>
+</document>
